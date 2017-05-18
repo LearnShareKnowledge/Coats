@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coats</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email address</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="confirm">Confirm</string>
+
+</resources>
