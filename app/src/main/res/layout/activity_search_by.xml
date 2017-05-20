@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme"
+    tools:context="com.learnshare.coats.screens.SearchByActivity">
+
+    <TextView
+        android:textColor="@color/text"
+        android:layout_width="match_parent"
+        android:id="@+id/tvSuggestion"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:typeface="serif"
+        android:textSize="20dp"
+        android:text="Please enter atleast one of the fields and press Search button"/>
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSuggestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="@string/phone_number"
+        android:inputType="number"
+        android:textColor="@color/text"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/text"
+        android:typeface="serif" />
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textColor="@color/text"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:enabled="false"
+        android:text="@string/search"
+        android:textColor="@color/text"
+        android:typeface="serif" />
+
+</RelativeLayout>
+</ScrollView>

@@ -24,15 +24,16 @@ public class SplashActivity extends Activity {
             @Override
             public void run()
             {
-                launchActivity();
+                finishThisAndLaunchActivity();
             }
         };
 
     }
 
-    private void launchActivity()
+    private void finishThisAndLaunchActivity()
     {
-        startActivity(new Intent(this,MainActivity.class));
+        finish();
+        startActivity(new Intent(this,CheckInOutActivity.class));
     }
 
     @Override

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +25,37 @@ public class MainActivity extends Activity {
     private String sPhone , sEmail , sName ;
 
     private Bitmap mBitmap ;
+
+    private TextWatcher mTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            checkAndValidateFields();
+        }
+    };
+
+    private void checkAndValidateFields()
+    {
+        String s1 = etEmail.getText().toString();
+        String s2 = etName.getText().toString();
+        String s3 = etPhone.getText().toString();
+
+        if(s1.equals("")|| s2.equals("") || s3.equals("")){
+            btnSubmit.setEnabled(false);
+        } else {
+            btnSubmit.setEnabled(true);
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,9 +83,15 @@ public class MainActivity extends Activity {
 
         etPhone = (EditText) findViewById(R.id.etPhoneNumber);
 
+        etPhone.addTextChangedListener(mTextWatcher);
+
         etEmail = (EditText) findViewById(R.id.etEmail);
 
+        etEmail.addTextChangedListener(mTextWatcher);
+
         etName = (EditText) findViewById(R.id.etName);
+
+        etName.addTextChangedListener(mTextWatcher);
 
         btnTakePhoto = (Button) findViewById(R.id.btnTakePhoto);
 
@@ -103,5 +142,11 @@ public class MainActivity extends Activity {
 
             }
         }
+    }
+
+
+    private void enableSubmitButton()
+    {
+        btnSubmit.setEnabled(true);
     }
 }

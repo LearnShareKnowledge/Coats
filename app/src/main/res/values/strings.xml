@@ -5,5 +5,8 @@
     <string name="name">Name</string>
     <string name="submit">Submit</string>
     <string name="confirm">Confirm</string>
+    <string name="checking_in">Checking in</string>
+    <string name="checking_out">Checking out</string>
+    <string name="search">Search</string>
 
 </resources>

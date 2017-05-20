@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/theme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.learnshare.coats.screens.CheckInOutActivity">
+
+    <Button
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/text"
+        android:typeface="serif"
+        android:id="@+id/btnCheckingIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checking_in"/>
+
+    <Button
+        android:layout_below="@id/btnCheckingIn"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/text"
+        android:typeface="serif"
+        android:id="@+id/btnCheckingOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checking_out"/>
+
+</RelativeLayout>

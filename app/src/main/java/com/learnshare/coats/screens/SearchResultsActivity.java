@@ -7,11 +7,10 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,11 +19,9 @@ import android.widget.TextView;
 import com.learnshare.coats.AppConstants;
 import com.learnshare.coats.R;
 
-import java.util.ArrayList;
-
 import static android.support.v4.content.PermissionChecker.PERMISSION_GRANTED;
 
-public class ConfirmActivity extends Activity {
+public class SearchResultsActivity extends Activity {
 
     private static final int REQUEST_SHARE = 102;
 
@@ -82,7 +79,7 @@ public class ConfirmActivity extends Activity {
 
                 //check for permission
 
-                int permissionCheck = ContextCompat.checkSelfPermission(ConfirmActivity.this,
+                int permissionCheck = ContextCompat.checkSelfPermission(SearchResultsActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
                 if(permissionCheck == PERMISSION_GRANTED)
@@ -120,7 +117,7 @@ public class ConfirmActivity extends Activity {
                 {
                     // return and ask for permission
 
-                    ActivityCompat.requestPermissions(ConfirmActivity.this,
+                    ActivityCompat.requestPermissions(SearchResultsActivity.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                             MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL);
 
